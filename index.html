@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="In-N-Out Burger — Fresh. Simple. Delicious. 100% American beef, hand-cut fries, and hand-spun shakes since 1948.">
+  <title>In-N-Out Burger | Fresh. Simple. Delicious.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="https://www.in-n-out.com/ResourcePackages/INNOUT/content/images/logo-2021.svg" alt="In-N-Out Burger">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#more">Explore</a>
+    </div>
+    <div class="nav-right">
+      <a href="menu.html" class="nav-cta">View Menu</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== MOBILE MENU ========== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="#story">Our Story</a>
+    <a href="#more">Explore</a>
+    <a href="menu.html" class="nav-cta" style="align-self:flex-start;margin-top:8px;">View Menu →</a>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Since 1948 · California Original</span>
+      <h1 class="hero-title">
+        Fresh.<br>
+        <span>Simple.</span><br>
+        Delicious.
+      </h1>
+      <p class="hero-subtitle">
+        100% American beef. No additives, fillers, or preservatives. Quality you can taste in every single bite.
+      </p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn-primary">View Our Menu &rarr;</a>
+        <a href="#story" class="btn-secondary">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">Scroll</div>
+  </section>
+
+  <!-- ========== CATEGORY STRIP ========== -->
+  <div class="category-strip">
+    <div class="category-strip-inner">
+      <a href="menu.html#burgers" class="cat-item active"><span>🍔&nbsp; Burgers</span></a>
+      <a href="menu.html#fries" class="cat-item"><span>🍟&nbsp; Fries</span></a>
+      <a href="menu.html#shakes" class="cat-item"><span>🥛&nbsp; Shakes</span></a>
+      <a href="menu.html#drinks" class="cat-item"><span>🥤&nbsp; Drinks</span></a>
+      <a href="menu.html#ingredients" class="cat-item"><span>🥬&nbsp; Ingredients</span></a>
+    </div>
+  </div>
+
+  <!-- ========== FEATURED MENU ========== -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <span class="section-tag">Our Signature Items</span>
+        <h2 class="section-title">The <span>Menu</span></h2>
+      </div>
+      <div class="cards-grid">
+        <div class="card fade-up">
+          <div class="card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/double-double.jpg"
+              alt="Double-Double Burger"
+              loading="lazy"
+            >
+          </div>
+          <div class="card-body">
+            <div class="card-title">Double-Double®</div>
+            <div class="card-desc">Two beef patties, two slices of real American cheese, fresh lettuce, tomato, onion, and our secret spread.</div>
+            <div class="card-action">
+              <a href="menu.html#burgers" class="card-btn">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <div class="card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/cheeseburger.jpg"
+              alt="Cheeseburger"
+              loading="lazy"
+            >
+          </div>
+          <div class="card-body">
+            <div class="card-title">Cheeseburger</div>
+            <div class="card-desc">One patty with real American cheese, crisp hand-leafed lettuce, fresh tomato, onion, and our classic spread.</div>
+            <div class="card-action">
+              <a href="menu.html#burgers" class="card-btn">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <div class="card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/fries/fries.jpg"
+              alt="French Fries"
+              loading="lazy"
+            >
+          </div>
+          <div class="card-body">
+            <div class="card-title">French Fries</div>
+            <div class="card-desc">Fresh, hand-cut potatoes prepared in 100% sunflower oil. Watch them being cut fresh right in front of you.</div>
+            <div class="card-action">
+              <a href="menu.html#fries" class="card-btn">Order Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <div class="card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/drinks/shakes.png"
+              alt="Hand-Spun Shakes"
+              loading="lazy"
+            >
+          </div>
+          <div class="card-body">
+            <div class="card-title">Hand-Spun Shakes</div>
+            <div class="card-desc">Chocolate, strawberry, or vanilla — hand-spun fresh and made with real ice cream. Nothing artificial, ever.</div>
+            <div class="card-action">
+              <a href="menu.html#shakes" class="card-btn">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROMO BANNER ========== -->
+  <div class="promo-wrap">
+    <div class="promo-banner fade-up">
+      <img
+        src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/homepage/double-double.webp"
+        alt="Double-Double Promo"
+      >
+      <div class="promo-overlay">
+        <div class="promo-content">
+          <div class="promo-tag">A True California Classic</div>
+          <div class="promo-title">The Double-Double®</div>
+          <div class="promo-sub">Forever fresh. Unchanged since 1963. The burger that started it all.</div>
+          <a href="menu.html#burgers" class="btn-primary">Order Now &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== QUALITY SECTION ========== -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <span class="section-tag">Quality You Can Taste</span>
+        <h2 class="section-title">Only the <span>Freshest</span></h2>
+      </div>
+      <div class="quality-grid">
+        <div class="quality-card fade-up">
+          <div class="quality-card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/buns.jpg"
+              alt="Toasted Buns"
+              loading="lazy"
+            >
+          </div>
+          <div class="quality-card-body">
+            <div class="quality-card-title">Toasted Buns</div>
+            <div class="quality-card-text">Freshly baked using old-fashioned, slow-rising sponge dough. Toasted to golden perfection every single time.</div>
+          </div>
+        </div>
+        <div class="quality-card fade-up">
+          <div class="quality-card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/cheese.jpg"
+              alt="Real Cheese"
+              loading="lazy"
+            >
+          </div>
+          <div class="quality-card-body">
+            <div class="quality-card-title">Real Cheese</div>
+            <div class="quality-card-text">Our American cheese is the real thing. No processed slices — just pure, melted, genuine American cheese on every burger.</div>
+          </div>
+        </div>
+        <div class="quality-card fade-up">
+          <div class="quality-card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/tomatoes.jpg"
+              alt="Fresh Tomatoes"
+              loading="lazy"
+            >
+          </div>
+          <div class="quality-card-body">
+            <div class="quality-card-title">Fresh Tomatoes</div>
+            <div class="quality-card-text">A slice from only the plumpest and juiciest tomatoes. Sourced fresh, sliced fresh, and served fresh — every single day.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HISTORY STRIP ========== -->
+  <section class="history-strip" id="story">
+    <div class="history-strip-inner">
+      <div class="history-year">1948</div>
+      <div class="history-content">
+        <div class="history-title">A California Original<br>Since 1948</div>
+        <div class="history-text">
+          Harry Snyder opened California's first drive-thru hamburger stand in Baldwin Park with a simple promise: make the freshest, highest-quality food and provide the best service around. Over 75 years later, that promise remains unchanged — and so does our menu.
+        </div>
+        <a href="#more" class="btn-white">Explore Our History</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TILES / EXPLORE ========== -->
+  <section class="section" id="more">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <span class="section-tag">Beyond the Burger</span>
+        <h2 class="section-title">More From <span>In-N-Out</span></h2>
+      </div>
+      <div class="tiles-grid fade-up">
+        <div class="tile" style="grid-row: span 2;">
+          <img
+            class="tile-img"
+            src="https://www.in-n-out.com/ino-images/default-source/homepage/store.jpg"
+            alt="Find a Location"
+            style="height:100%;min-height:500px;"
+          >
+          <div class="tile-overlay">
+            <span class="tile-label">Find a Location</span>
+          </div>
+        </div>
+        <div class="tile">
+          <img
+            class="tile-img"
+            src="https://www.in-n-out.com/ino-images/default-source/homepage/team.jpg"
+            alt="Join Our Team"
+          >
+          <div class="tile-overlay">
+            <span class="tile-label">Join Our Team</span>
+          </div>
+        </div>
+        <div class="tile">
+          <img
+            class="tile-img"
+            src="https://www.in-n-out.com/ino-images/default-source/homepage/history.jpg"
+            alt="Our History"
+          >
+          <div class="tile-overlay">
+            <span class="tile-label">Our History</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <img src="https://www.in-n-out.com/ResourcePackages/INNOUT/content/images/logo-2021.svg" alt="In-N-Out Burger">
+          </div>
+          <div class="footer-tagline">Quality You Can Taste. No additives, no fillers, no preservatives. Just real food made fresh — since 1948.</div>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/innout" class="social-btn" target="_blank" rel="noopener">f</a>
+            <a href="https://www.instagram.com/innout" class="social-btn" target="_blank" rel="noopener">ig</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Menu</div>
+          <div class="footer-col-links">
+            <a href="menu.html#burgers">Burgers</a>
+            <a href="menu.html#fries">French Fries</a>
+            <a href="menu.html#shakes">Shakes</a>
+            <a href="menu.html#drinks">Beverages</a>
+            <a href="menu.html#ingredients">Ingredients</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <div class="footer-col-links">
+            <a href="#story">Our History</a>
+            <a href="#">Employment</a>
+            <a href="#">Foundations</a>
+            <a href="#">Merchandise</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Visit Us</div>
+          <div class="footer-col-links">
+            <a href="#">Find Locations</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Cookout Truck</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 In-N-Out Burgers. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Transparency Supply Chain</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

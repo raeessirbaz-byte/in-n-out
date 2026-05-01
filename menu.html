@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="In-N-Out Burger Menu — Burgers, Fresh-Cut Fries, Hand-Spun Shakes, and Beverages made fresh daily.">
+  <title>Menu | In-N-Out Burger</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="https://www.in-n-out.com/ResourcePackages/INNOUT/content/images/logo-2021.svg" alt="In-N-Out Burger">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html#story">Our Story</a>
+      <a href="index.html#more">Explore</a>
+    </div>
+    <div class="nav-right">
+      <a href="#burgers" class="nav-cta">Order Now</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== MOBILE MENU ========== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="index.html#story">Our Story</a>
+    <a href="index.html#more">Explore</a>
+  </div>
+
+  <!-- ========== MENU HEADER ========== -->
+  <div class="menu-header">
+    <div class="menu-header-bg"></div>
+    <div class="menu-header-overlay"></div>
+    <div class="menu-header-content">
+      <h1 class="menu-header-title">Our Menu</h1>
+    </div>
+  </div>
+
+  <!-- ========== STICKY CATEGORY NAV ========== -->
+  <nav class="sticky-cat-nav" id="stickyCatNav">
+    <div class="sticky-cat-nav-inner">
+      <a href="#burgers" class="cat-item" data-target="burgers"><span>🍔&nbsp; Burgers</span></a>
+      <a href="#fries" class="cat-item" data-target="fries"><span>🍟&nbsp; Fries</span></a>
+      <a href="#shakes" class="cat-item" data-target="shakes"><span>🥛&nbsp; Shakes</span></a>
+      <a href="#drinks" class="cat-item" data-target="drinks"><span>🥤&nbsp; Drinks</span></a>
+      <a href="#ingredients" class="cat-item" data-target="ingredients"><span>🥬&nbsp; Ingredients</span></a>
+    </div>
+  </nav>
+
+  <!-- ========== BURGERS ========== -->
+  <section class="menu-section" id="burgers">
+    <div class="menu-section-inner">
+      <div class="menu-section-title fade-up">Burgers</div>
+      <p class="menu-section-sub fade-up">Made to order, every single time. Fresh beef, real cheese, hand-leafed vegetables — no additives, fillers, or preservatives.</p>
+      <div class="menu-cards-grid">
+        <div class="menu-card fade-up">
+          <div class="menu-card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/double-double.jpg"
+              alt="Double-Double"
+            >
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Double-Double®</div>
+            <div class="menu-card-desc">Two beef patties with two slices of real American cheese, fresh hand-leafed lettuce, ripe tomato, grilled or raw onion, and our signature spread on a freshly baked, toasted bun.</div>
+          </div>
+        </div>
+        <div class="menu-card fade-up">
+          <div class="menu-card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/cheeseburger.jpg"
+              alt="Cheeseburger"
+            >
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Cheeseburger</div>
+            <div class="menu-card-desc">One patty with one slice of real American cheese, crisp lettuce, fresh tomato, raw or grilled onion, and our iconic spread. Simple, satisfying, and perfect.</div>
+          </div>
+        </div>
+        <div class="menu-card fade-up">
+          <div class="menu-card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/hamburger.jpg"
+              alt="Hamburger"
+            >
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Hamburger</div>
+            <div class="menu-card-desc">100% American beef with no additives, fillers, or preservatives. Fresh lettuce, tomato, raw or grilled onion, and spread — the classic, pure and simple.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FRIES ========== -->
+  <section class="menu-section" id="fries">
+    <div class="menu-section-inner">
+      <div class="menu-section-title fade-up">French Fries</div>
+      <p class="menu-section-sub fade-up">Fresh, hand-cut potatoes prepared in 100% sunflower oil. Never frozen. Watch them being cut fresh right in front of you.</p>
+      <div class="menu-cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="menu-card fade-up">
+          <div class="menu-card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/fries/fries.jpg"
+              alt="French Fries"
+            >
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">French Fries</div>
+            <div class="menu-card-desc">Fresh, hand-cut Kennebec potatoes prepared in 100% pure sunflower oil. Light, crispy, and made to order — never frozen, never compromised.</div>
+          </div>
+        </div>
+        <div class="menu-card fade-up">
+          <div class="menu-card-img">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/fries/associate.jpg"
+              alt="Fresh Cut Potatoes"
+            >
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Cut Fresh Daily</div>
+            <div class="menu-card-desc">Our potatoes arrive whole and are hand-cut daily in every single restaurant. You can watch it happen live — right behind the counter, every time you visit.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SHAKES ========== -->
+  <section class="menu-section" id="shakes">
+    <div class="menu-section-inner">
+      <div class="menu-section-title fade-up">Hand-Spun Shakes</div>
+      <p class="menu-section-sub fade-up">Made with real ice cream. Hand-spun fresh every time. Three classic flavors — Chocolate, Strawberry, and Vanilla.</p>
+      <div class="menu-cards-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="menu-card fade-up">
+          <div class="menu-card-img" style="height:320px;">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/drinks/shakes.png"
+              alt="Hand-Spun Shakes"
+              style="object-fit:contain;background:#232323;padding:12px;"
+            >
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Hand-Spun Shakes</div>
+            <div class="menu-card-desc">
+              Three timeless flavors:<br>
+              <strong style="color:#fff;">Chocolate</strong> — rich and creamy<br>
+              <strong style="color:#fff;">Strawberry</strong> — fruity and fresh<br>
+              <strong style="color:#fff;">Vanilla</strong> — smooth and classic<br><br>
+              Every shake is hand-spun fresh and made with real ice cream — no pre-mix, ever.
+            </div>
+          </div>
+        </div>
+        <div class="menu-card fade-up" style="display:flex;flex-direction:column;justify-content:center;">
+          <div class="menu-card-body" style="padding:40px 32px;">
+            <div class="menu-card-title" style="font-size:clamp(28px,3vw,42px);margin-bottom:16px;">Real Ice Cream.<br>Nothing Else.</div>
+            <div class="menu-card-desc" style="font-size:15px;line-height:1.75;">
+              We use real ice cream — no powder, no mix, no shortcuts. Our shakes are made the old-fashioned way: hand-spun in a metal cup, thick enough to need a spoon. Milkshakes have been on the In-N-Out menu since 1975, and the recipe has never changed.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DRINKS ========== -->
+  <section class="menu-section" id="drinks">
+    <div class="menu-section-inner">
+      <div class="menu-section-title fade-up">Beverages</div>
+      <p class="menu-section-sub fade-up">A full selection of soft drinks, specialty beverages, and more to go with your meal.</p>
+      <div class="menu-cards-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="menu-card fade-up">
+          <div class="menu-card-img" style="height:300px;">
+            <img
+              src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/drinks/cups.png"
+              alt="Beverages"
+              style="object-fit:contain;background:#232323;padding:12px;"
+            >
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-title">Soft Drinks</div>
+            <div class="menu-card-desc">Coca-Cola, Diet Coke, Cherry Coke, 7UP, Dr. Pepper, Root Beer, Pink Lemonade, and Iced Tea — available in multiple sizes.</div>
+          </div>
+        </div>
+        <div class="menu-card fade-up">
+          <div class="menu-card-body" style="padding:36px 32px;display:flex;flex-direction:column;justify-content:center;min-height:300px;">
+            <div class="menu-card-title" style="margin-bottom:20px;">Hot &amp; Cold Drinks</div>
+            <div class="menu-card-desc" style="font-size:14px;line-height:2;">
+              ☕ &nbsp;<strong style="color:#fff;">Coffee</strong><br>
+              🍫 &nbsp;<strong style="color:#fff;">Hot Cocoa</strong><br>
+              🥛 &nbsp;<strong style="color:#fff;">Milk</strong><br>
+              🍋 &nbsp;<strong style="color:#fff;">Pink Lemonade</strong><br>
+              🧊 &nbsp;<strong style="color:#fff;">Iced Tea</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INGREDIENTS ========== -->
+  <section class="menu-section" id="ingredients">
+    <div class="menu-section-inner">
+      <div class="menu-section-title fade-up">Our Ingredients</div>
+      <p class="menu-section-sub fade-up">Nothing artificial. Nothing frozen. Every ingredient is sourced fresh and used within days of arrival at our restaurants.</p>
+      <div class="ingredients-grid">
+        <div class="ingredient-card fade-up">
+          <img src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/buns.jpg" alt="Buns" loading="lazy">
+          <div class="ingredient-card-name">Toasted Buns</div>
+          <div class="ingredient-card-desc">Freshly baked using old-fashioned, slow-rising sponge dough</div>
+        </div>
+        <div class="ingredient-card fade-up">
+          <img src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/cheese.jpg" alt="Cheese" loading="lazy">
+          <div class="ingredient-card-name">Real Cheese</div>
+          <div class="ingredient-card-desc">Our American cheese is the real thing — no processed substitutes</div>
+        </div>
+        <div class="ingredient-card fade-up">
+          <img src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/onions.jpg" alt="Onions" loading="lazy">
+          <div class="ingredient-card-name">Onions</div>
+          <div class="ingredient-card-desc">Freshly sliced or grilled to order, every time</div>
+        </div>
+        <div class="ingredient-card fade-up">
+          <img src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/lettuce.jpg" alt="Lettuce" loading="lazy">
+          <div class="ingredient-card-name">Lettuce</div>
+          <div class="ingredient-card-desc">Fresh, crispy &amp; hand-leafed for every single order</div>
+        </div>
+        <div class="ingredient-card fade-up">
+          <img src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/spread.jpg" alt="Spread" loading="lazy">
+          <div class="ingredient-card-name">Our Spread</div>
+          <div class="ingredient-card-desc">Our own signature recipe, unchanged since 1948</div>
+        </div>
+        <div class="ingredient-card fade-up">
+          <img src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/tomatoes.jpg" alt="Tomatoes" loading="lazy">
+          <div class="ingredient-card-name">Tomatoes</div>
+          <div class="ingredient-card-desc">Only the plumpest and juiciest — sourced and sliced fresh daily</div>
+        </div>
+        <div class="ingredient-card fade-up">
+          <img src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/fries/potatoes.jpg" alt="Potatoes" loading="lazy">
+          <div class="ingredient-card-name">Potatoes</div>
+          <div class="ingredient-card-desc">Hand-cut fresh daily in 100% sunflower oil — never frozen</div>
+        </div>
+        <div class="ingredient-card fade-up">
+          <img src="https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/ingredients/double-double.jpg" alt="100% Beef" loading="lazy">
+          <div class="ingredient-card-name">100% Beef</div>
+          <div class="ingredient-card-desc">No additives, fillers, or preservatives — ever</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <img src="https://www.in-n-out.com/ResourcePackages/INNOUT/content/images/logo-2021.svg" alt="In-N-Out Burger">
+          </div>
+          <div class="footer-tagline">Quality You Can Taste. No additives, no fillers, no preservatives. Just real food made fresh — since 1948.</div>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/innout" class="social-btn" target="_blank" rel="noopener">f</a>
+            <a href="https://www.instagram.com/innout" class="social-btn" target="_blank" rel="noopener">ig</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Menu</div>
+          <div class="footer-col-links">
+            <a href="#burgers">Burgers</a>
+            <a href="#fries">French Fries</a>
+            <a href="#shakes">Shakes</a>
+            <a href="#drinks">Beverages</a>
+            <a href="#ingredients">Ingredients</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <div class="footer-col-links">
+            <a href="index.html#story">Our History</a>
+            <a href="#">Employment</a>
+            <a href="#">Foundations</a>
+            <a href="#">Merchandise</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Visit Us</div>
+          <div class="footer-col-links">
+            <a href="#">Find Locations</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Cookout Truck</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 In-N-Out Burgers. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Transparency Supply Chain</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
