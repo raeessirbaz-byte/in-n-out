@@ -255,7 +255,7 @@ a { text-decoration: none; color: inherit; }
 }
 .btn-secondary {
   background: transparent;
-  color: white;
+  color: var(--red);
   padding: 14px 34px;
   border-radius: 50px;
   border: 2px solid var(--red);
