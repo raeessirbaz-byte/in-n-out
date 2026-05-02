@@ -140,6 +140,25 @@ if (catStrip && !stickyCatNav) {
   });
 }
 
+/* ===== MENU PAGE: FILTER TABS ===== */
+const filterTabs = document.querySelectorAll('.filter-tab');
+const darkCards  = document.querySelectorAll('.dark-card');
+
+function filterMenu(category) {
+  filterTabs.forEach(tab => {
+    tab.classList.toggle('active', tab.dataset.filter === category);
+  });
+  darkCards.forEach(card => {
+    card.classList.toggle('hidden', category !== 'all' && card.dataset.category !== category);
+  });
+}
+
+if (filterTabs.length) {
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => filterMenu(tab.dataset.filter));
+  });
+}
+
 /* ===== SMOOTH SCROLL FOR ANCHOR LINKS ===== */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {

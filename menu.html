@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="In-N-Out Burger Menu — Burgers, Fresh-Cut Fries, Hand-Spun Shakes, and Beverages made fresh daily.">
   <title>Menu | In-N-Out Burger</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="menu-page">
 
   <!-- ========== NAVBAR ========== -->
-  <nav class="navbar scrolled" id="navbar">
+  <nav class="navbar navbar--dark scrolled" id="navbar">
     <a href="index.html" class="nav-logo">
       <img src="images/logo.svg" alt="In-N-Out Burger">
     </a>
@@ -24,7 +23,7 @@
       <a href="index.html#more">Explore</a>
     </div>
     <div class="nav-right">
-      <a href="#burgers" class="nav-cta">Order Now</a>
+      <a href="#menu-grid" class="nav-cta">Order Now</a>
       <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -32,277 +31,266 @@
   </nav>
 
   <!-- ========== MOBILE MENU ========== -->
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu mobile-menu--dark" id="mobileMenu" aria-hidden="true">
     <a href="index.html">Home</a>
     <a href="menu.html">Menu</a>
     <a href="index.html#story">Our Story</a>
     <a href="index.html#more">Explore</a>
   </div>
 
-  <!-- ========== MENU HEADER ========== -->
-  <div class="menu-header">
-    <div class="menu-header-bg"></div>
-    <div class="menu-header-overlay"></div>
-    <div class="menu-header-content">
-      <h1 class="menu-header-title">Our Menu</h1>
+  <!-- ========== DARK MENU CONTENT ========== -->
+  <div class="dark-menu-wrap" id="menu-grid">
+
+    <!-- Page header -->
+    <div class="dark-menu-header">
+      <h1 class="dark-menu-title">Our <span>Menu</span></h1>
+      <p class="dark-menu-sub">Made fresh to order — no additives, no fillers, no shortcuts.</p>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="filter-bar">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="burgers">🍔 Burgers</button>
+      <button class="filter-tab" data-filter="fries">🍟 Fries</button>
+      <button class="filter-tab" data-filter="shakes">🥛 Shakes</button>
+      <button class="filter-tab" data-filter="drinks">🥤 Drinks</button>
+      <button class="filter-tab" data-filter="ingredients">🥬 Ingredients</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="dark-grid">
+
+      <!-- BURGERS -->
+      <div class="dark-card" data-category="burgers">
+        <div class="dark-card-badge">Signature</div>
+        <div class="dark-card-img">
+          <img src="images/double-double.jpg" alt="Double-Double">
+        </div>
+        <div class="dark-card-title">Double-Double®</div>
+        <div class="dark-card-desc">Two beef patties, two slices of real American cheese, fresh lettuce, tomato, onion and our signature spread.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Two patties</span>
+          <button class="dark-card-add" aria-label="Order">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="burgers">
+        <div class="dark-card-badge">Classic</div>
+        <div class="dark-card-img">
+          <img src="images/cheeseburger.jpg" alt="Cheeseburger">
+        </div>
+        <div class="dark-card-title">Cheeseburger</div>
+        <div class="dark-card-desc">One beef patty with real American cheese, crisp hand-leafed lettuce, fresh tomato, onion and our classic spread.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">One patty</span>
+          <button class="dark-card-add" aria-label="Order">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="burgers">
+        <div class="dark-card-badge">Pure</div>
+        <div class="dark-card-img">
+          <img src="images/hamburger.jpg" alt="Hamburger">
+        </div>
+        <div class="dark-card-title">Hamburger</div>
+        <div class="dark-card-desc">100% American beef — no additives, fillers or preservatives. Lettuce, tomato, onion and spread.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">No cheese</span>
+          <button class="dark-card-add" aria-label="Order">+</button>
+        </div>
+      </div>
+
+      <!-- FRIES -->
+      <div class="dark-card" data-category="fries">
+        <div class="dark-card-badge">Fresh Cut</div>
+        <div class="dark-card-img">
+          <img src="images/fries.jpg" alt="French Fries">
+        </div>
+        <div class="dark-card-title">French Fries</div>
+        <div class="dark-card-desc">Hand-cut Kennebec potatoes in 100% sunflower oil. Light and crispy — made to order, never frozen.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Sunflower oil</span>
+          <button class="dark-card-add" aria-label="Order">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="fries">
+        <div class="dark-card-badge">Farm Fresh</div>
+        <div class="dark-card-img">
+          <img src="images/potatoes.jpg" alt="Fresh Potatoes">
+        </div>
+        <div class="dark-card-title">Cut Fresh Daily</div>
+        <div class="dark-card-desc">Potatoes arrive whole and are hand-cut daily in every restaurant — watch it happen live behind the counter.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Farm to counter</span>
+          <button class="dark-card-add" aria-label="Order">+</button>
+        </div>
+      </div>
+
+      <!-- SHAKES -->
+      <div class="dark-card" data-category="shakes">
+        <div class="dark-card-badge">Real Cream</div>
+        <div class="dark-card-img dark-card-img--chocolate">
+          <img src="images/shakes.png" alt="Chocolate Shake" style="object-fit:contain;padding:16px;">
+        </div>
+        <div class="dark-card-title">Chocolate Shake</div>
+        <div class="dark-card-desc">Rich, deep chocolate — hand-spun in a metal cup with real ice cream. Thick enough to need a spoon.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Real ice cream</span>
+          <button class="dark-card-add" aria-label="Order">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="shakes">
+        <div class="dark-card-badge">Real Cream</div>
+        <div class="dark-card-img dark-card-img--strawberry">
+          <img src="images/shakes.png" alt="Strawberry Shake" style="object-fit:contain;padding:16px;">
+        </div>
+        <div class="dark-card-title">Strawberry Shake</div>
+        <div class="dark-card-desc">Fruity and fresh, made with real strawberry and real ice cream. Sweet, cool and perfectly thick.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Real ice cream</span>
+          <button class="dark-card-add" aria-label="Order">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="shakes">
+        <div class="dark-card-badge">Real Cream</div>
+        <div class="dark-card-img dark-card-img--vanilla">
+          <img src="images/shakes.png" alt="Vanilla Shake" style="object-fit:contain;padding:16px;">
+        </div>
+        <div class="dark-card-title">Vanilla Shake</div>
+        <div class="dark-card-desc">Smooth and classic. Pure vanilla with real ice cream — unchanged since shakes joined our menu in 1975.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Real ice cream</span>
+          <button class="dark-card-add" aria-label="Order">+</button>
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div class="dark-card" data-category="drinks">
+        <div class="dark-card-badge">Cold</div>
+        <div class="dark-card-img">
+          <img src="images/cups.png" alt="Soft Drinks" style="object-fit:contain;padding:20px;">
+        </div>
+        <div class="dark-card-title">Soft Drinks</div>
+        <div class="dark-card-desc">Coca-Cola, Diet Coke, Cherry Coke, 7UP, Dr. Pepper, Root Beer, Pink Lemonade and Iced Tea.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Multiple sizes</span>
+          <button class="dark-card-add" aria-label="Order">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="drinks">
+        <div class="dark-card-badge">Hot</div>
+        <div class="dark-card-img dark-card-img--coffee">
+          <img src="images/cups.png" alt="Hot Drinks" style="object-fit:contain;padding:20px;">
+        </div>
+        <div class="dark-card-title">Hot Drinks</div>
+        <div class="dark-card-desc">Fresh-brewed Coffee and warming Hot Cocoa — the perfect complement to any In-N-Out meal.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Freshly brewed</span>
+          <button class="dark-card-add" aria-label="Order">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="drinks">
+        <div class="dark-card-badge">Fresh</div>
+        <div class="dark-card-img dark-card-img--milk">
+          <img src="images/cups.png" alt="Milk" style="object-fit:contain;padding:20px;">
+        </div>
+        <div class="dark-card-title">Milk</div>
+        <div class="dark-card-desc">Cold, fresh milk — a simple, classic choice for kids and adults alike.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Cold &amp; fresh</span>
+          <button class="dark-card-add" aria-label="Order">+</button>
+        </div>
+      </div>
+
+      <!-- INGREDIENTS -->
+      <div class="dark-card" data-category="ingredients">
+        <div class="dark-card-badge">Baked Fresh</div>
+        <div class="dark-card-img">
+          <img src="images/buns.jpg" alt="Buns">
+        </div>
+        <div class="dark-card-title">Toasted Buns</div>
+        <div class="dark-card-desc">Freshly baked using old-fashioned, slow-rising sponge dough. Toasted to golden perfection.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Slow-rise dough</span>
+          <button class="dark-card-add" aria-label="View">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="ingredients">
+        <div class="dark-card-badge">100% Real</div>
+        <div class="dark-card-img">
+          <img src="images/cheese.jpg" alt="Cheese">
+        </div>
+        <div class="dark-card-title">Real Cheese</div>
+        <div class="dark-card-desc">Our American cheese is the real thing — no processed substitutes, ever.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">American cheese</span>
+          <button class="dark-card-add" aria-label="View">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="ingredients">
+        <div class="dark-card-badge">Hand-leafed</div>
+        <div class="dark-card-img">
+          <img src="images/lettuce.jpg" alt="Lettuce">
+        </div>
+        <div class="dark-card-title">Lettuce</div>
+        <div class="dark-card-desc">Fresh, crispy and hand-leafed for every single order — never pre-shredded.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Fresh daily</span>
+          <button class="dark-card-add" aria-label="View">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="ingredients">
+        <div class="dark-card-badge">Secret</div>
+        <div class="dark-card-img">
+          <img src="images/spread.jpg" alt="Spread">
+        </div>
+        <div class="dark-card-title">Our Spread</div>
+        <div class="dark-card-desc">Our own signature recipe, unchanged since 1948. The soul of every In-N-Out burger.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Since 1948</span>
+          <button class="dark-card-add" aria-label="View">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="ingredients">
+        <div class="dark-card-badge">Plump &amp; Fresh</div>
+        <div class="dark-card-img">
+          <img src="images/tomatoes.jpg" alt="Tomatoes">
+        </div>
+        <div class="dark-card-title">Tomatoes</div>
+        <div class="dark-card-desc">Only the plumpest and juiciest — sourced fresh, sliced fresh, served fresh every single day.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">Sliced daily</span>
+          <button class="dark-card-add" aria-label="View">+</button>
+        </div>
+      </div>
+
+      <div class="dark-card" data-category="ingredients">
+        <div class="dark-card-badge">No Additives</div>
+        <div class="dark-card-img">
+          <img src="images/double-double.jpg" alt="100% Beef">
+        </div>
+        <div class="dark-card-title">100% Beef</div>
+        <div class="dark-card-desc">Pure American beef — no additives, no fillers, no preservatives. Fresher than any other chain.</div>
+        <div class="dark-card-footer">
+          <span class="dark-card-label">American beef</span>
+          <button class="dark-card-add" aria-label="View">+</button>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- ========== STICKY CATEGORY NAV ========== -->
-  <nav class="sticky-cat-nav" id="stickyCatNav">
-    <div class="sticky-cat-nav-inner">
-      <a href="#burgers" class="cat-item" data-target="burgers"><span>🍔&nbsp; Burgers</span></a>
-      <a href="#fries" class="cat-item" data-target="fries"><span>🍟&nbsp; Fries</span></a>
-      <a href="#shakes" class="cat-item" data-target="shakes"><span>🥛&nbsp; Shakes</span></a>
-      <a href="#drinks" class="cat-item" data-target="drinks"><span>🥤&nbsp; Drinks</span></a>
-      <a href="#ingredients" class="cat-item" data-target="ingredients"><span>🥬&nbsp; Ingredients</span></a>
-    </div>
-  </nav>
-
-  <!-- ========== BURGERS ========== -->
-  <section class="menu-section" id="burgers">
-    <div class="menu-section-inner">
-      <div class="menu-section-head fade-up">
-        <h2 class="menu-section-title">Burgers</h2>
-        <p class="menu-section-sub">Made to order, every single time. Fresh beef, real cheese, hand-leafed vegetables — no additives, fillers, or preservatives.</p>
-      </div>
-      <div class="menu-circle-grid">
-        <div class="circle-card fade-up">
-          <div class="circle-img">
-            <img src="images/double-double.jpg" alt="Double-Double">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Double-Double®</div>
-            <div class="circle-tag">Two patties · Two cheese</div>
-            <div class="circle-desc">Two beef patties, two slices of real American cheese, fresh hand-leafed lettuce, ripe tomato, and our signature spread.</div>
-          </div>
-        </div>
-        <div class="circle-card fade-up">
-          <div class="circle-img">
-            <img src="images/cheeseburger.jpg" alt="Cheeseburger">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Cheeseburger</div>
-            <div class="circle-tag">One patty · One cheese</div>
-            <div class="circle-desc">One patty with real American cheese, crisp lettuce, fresh tomato, onion, and our classic spread on a toasted bun.</div>
-          </div>
-        </div>
-        <div class="circle-card fade-up">
-          <div class="circle-img">
-            <img src="images/hamburger.jpg" alt="Hamburger">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Hamburger</div>
-            <div class="circle-tag">100% beef · No cheese</div>
-            <div class="circle-desc">100% American beef, no additives, no fillers, no preservatives. Crisp lettuce, tomato, onion, and spread.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FRIES ========== -->
-  <section class="menu-section alt-bg" id="fries">
-    <div class="menu-section-inner">
-      <div class="menu-section-head fade-up">
-        <h2 class="menu-section-title">French Fries</h2>
-        <p class="menu-section-sub">Fresh, hand-cut potatoes prepared in 100% sunflower oil. Never frozen — watch them cut right in front of you.</p>
-      </div>
-      <div class="menu-circle-grid cols-2">
-        <div class="circle-card fade-up">
-          <div class="circle-img">
-            <img src="images/fries.jpg" alt="French Fries">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">French Fries</div>
-            <div class="circle-tag">Hand-cut · Sunflower oil</div>
-            <div class="circle-desc">Light, crispy, and made to order. Fresh Kennebec potatoes, never frozen and never compromised.</div>
-          </div>
-        </div>
-        <div class="circle-card fade-up">
-          <div class="circle-img">
-            <img src="images/potatoes.jpg" alt="Fresh Potatoes">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Cut Fresh Daily</div>
-            <div class="circle-tag">Farm to counter</div>
-            <div class="circle-desc">Potatoes arrive whole and are hand-cut daily in every restaurant — you can watch it happen live right behind the counter.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SHAKES ========== -->
-  <section class="menu-section" id="shakes">
-    <div class="menu-section-inner">
-      <div class="menu-section-head fade-up">
-        <h2 class="menu-section-title">Hand-Spun Shakes</h2>
-        <p class="menu-section-sub">Made with real ice cream. Hand-spun fresh every time — no pre-mix, no shortcuts, ever.</p>
-      </div>
-      <div class="menu-circle-grid">
-        <div class="circle-card fade-up">
-          <div class="circle-img circle-img--chocolate">
-            <img src="images/shakes.png" alt="Chocolate Shake">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Chocolate</div>
-            <div class="circle-tag">Real ice cream</div>
-            <div class="circle-desc">Rich, deep chocolate made the old-fashioned way — hand-spun in a metal cup, thick enough to need a spoon.</div>
-          </div>
-        </div>
-        <div class="circle-card fade-up">
-          <div class="circle-img circle-img--strawberry">
-            <img src="images/shakes.png" alt="Strawberry Shake">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Strawberry</div>
-            <div class="circle-tag">Real ice cream</div>
-            <div class="circle-desc">Fruity and fresh, made with real strawberry and real ice cream. Sweet, cool, and perfectly thick.</div>
-          </div>
-        </div>
-        <div class="circle-card fade-up">
-          <div class="circle-img circle-img--vanilla">
-            <img src="images/shakes.png" alt="Vanilla Shake">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Vanilla</div>
-            <div class="circle-tag">Real ice cream</div>
-            <div class="circle-desc">Smooth and classic. Pure vanilla with real ice cream — unchanged since milkshakes joined our menu in 1975.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== DRINKS ========== -->
-  <section class="menu-section alt-bg" id="drinks">
-    <div class="menu-section-inner">
-      <div class="menu-section-head fade-up">
-        <h2 class="menu-section-title">Beverages</h2>
-        <p class="menu-section-sub">A full range of soft drinks, specialty beverages, and hot drinks — always the perfect pairing.</p>
-      </div>
-      <div class="menu-circle-grid">
-        <div class="circle-card fade-up">
-          <div class="circle-img">
-            <img src="images/cups.png" alt="Soft Drinks" style="object-fit:contain;padding:18px;">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Soft Drinks</div>
-            <div class="circle-tag">Multiple sizes</div>
-            <div class="circle-desc">Coca-Cola, Diet Coke, Cherry Coke, 7UP, Dr. Pepper, Root Beer, Pink Lemonade, and Iced Tea.</div>
-          </div>
-        </div>
-        <div class="circle-card fade-up">
-          <div class="circle-img circle-img--coffee">
-            <img src="images/cups.png" alt="Hot Drinks" style="object-fit:contain;padding:18px;">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Hot Drinks</div>
-            <div class="circle-tag">Freshly brewed</div>
-            <div class="circle-desc">Fresh-brewed Coffee and warming Hot Cocoa — the perfect complement to any meal.</div>
-          </div>
-        </div>
-        <div class="circle-card fade-up">
-          <div class="circle-img circle-img--milk">
-            <img src="images/cups.png" alt="Milk" style="object-fit:contain;padding:18px;">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Milk</div>
-            <div class="circle-tag">Cold &amp; fresh</div>
-            <div class="circle-desc">Cold, fresh milk — a simple, classic choice for kids and adults alike.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== INGREDIENTS ========== -->
-  <section class="menu-section" id="ingredients">
-    <div class="menu-section-inner">
-      <div class="menu-section-head fade-up">
-        <h2 class="menu-section-title">Our Ingredients</h2>
-        <p class="menu-section-sub">Nothing artificial. Nothing frozen. Every ingredient is sourced fresh and used within days of arrival at our restaurants.</p>
-      </div>
-      <div class="menu-circle-grid cols-4">
-        <div class="circle-card circle-card--sm fade-up">
-          <div class="circle-img circle-img--sm">
-            <img src="images/buns.jpg" alt="Buns" loading="lazy">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Toasted Buns</div>
-            <div class="circle-tag">Freshly baked daily</div>
-          </div>
-        </div>
-        <div class="circle-card circle-card--sm fade-up">
-          <div class="circle-img circle-img--sm">
-            <img src="images/cheese.jpg" alt="Cheese" loading="lazy">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Real Cheese</div>
-            <div class="circle-tag">100% American</div>
-          </div>
-        </div>
-        <div class="circle-card circle-card--sm fade-up">
-          <div class="circle-img circle-img--sm">
-            <img src="images/onions.jpg" alt="Onions" loading="lazy">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Onions</div>
-            <div class="circle-tag">Sliced or grilled</div>
-          </div>
-        </div>
-        <div class="circle-card circle-card--sm fade-up">
-          <div class="circle-img circle-img--sm">
-            <img src="images/lettuce.jpg" alt="Lettuce" loading="lazy">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Lettuce</div>
-            <div class="circle-tag">Hand-leafed fresh</div>
-          </div>
-        </div>
-        <div class="circle-card circle-card--sm fade-up">
-          <div class="circle-img circle-img--sm">
-            <img src="images/spread.jpg" alt="Spread" loading="lazy">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Our Spread</div>
-            <div class="circle-tag">Unchanged since 1948</div>
-          </div>
-        </div>
-        <div class="circle-card circle-card--sm fade-up">
-          <div class="circle-img circle-img--sm">
-            <img src="images/tomatoes.jpg" alt="Tomatoes" loading="lazy">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Tomatoes</div>
-            <div class="circle-tag">Plump &amp; juicy</div>
-          </div>
-        </div>
-        <div class="circle-card circle-card--sm fade-up">
-          <div class="circle-img circle-img--sm">
-            <img src="images/potatoes.jpg" alt="Potatoes" loading="lazy">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">Potatoes</div>
-            <div class="circle-tag">Never frozen</div>
-          </div>
-        </div>
-        <div class="circle-card circle-card--sm fade-up">
-          <div class="circle-img circle-img--sm">
-            <img src="images/double-double.jpg" alt="100% Beef" loading="lazy">
-          </div>
-          <div class="circle-body">
-            <div class="circle-title">100% Beef</div>
-            <div class="circle-tag">No additives ever</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ========== FOOTER ========== -->
-  <footer>
+  <footer class="footer--dark-page">
     <div class="footer-inner">
       <div class="footer-top">
         <div>
@@ -318,11 +306,11 @@
         <div>
           <div class="footer-col-title">Menu</div>
           <div class="footer-col-links">
-            <a href="#burgers">Burgers</a>
-            <a href="#fries">French Fries</a>
-            <a href="#shakes">Shakes</a>
-            <a href="#drinks">Beverages</a>
-            <a href="#ingredients">Ingredients</a>
+            <a href="#" onclick="filterMenu('burgers')">Burgers</a>
+            <a href="#" onclick="filterMenu('fries')">French Fries</a>
+            <a href="#" onclick="filterMenu('shakes')">Shakes</a>
+            <a href="#" onclick="filterMenu('drinks')">Beverages</a>
+            <a href="#" onclick="filterMenu('ingredients')">Ingredients</a>
           </div>
         </div>
         <div>
