@@ -1081,44 +1081,45 @@ footer {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .hero-content { padding: 0 22px; }
+  .hero-subtitle { max-width: 100%; font-size: 15px; padding: 8px 14px; }
   .section-inner,
   .menu-section-inner,
   .footer-inner,
   .history-strip-inner { padding: 0 22px; }
   .cards-grid,
   .quality-grid { grid-template-columns: 1fr; }
-  .menu-circle-grid { grid-template-columns: repeat(2, 1fr) !important; max-width: 100% !important; gap: 28px 16px; }
-  .menu-circle-grid.cols-4 { grid-template-columns: repeat(2, 1fr) !important; }
-  .home-circle-grid .circle-img { width: 150px; height: 150px; }
-  .circle-img { width: 160px; height: 160px; }
-  .circle-img--sm { width: 110px; height: 110px; }
-  .circle-title { font-size: 18px; }
-  .home-circle-grid .circle-title { font-size: 18px; }
   .tiles-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
   .tiles-grid .tile:first-child { grid-row: auto; }
   .tiles-grid .tile-img { min-height: 220px; }
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
-  .promo-wrap { padding: 0 22px; }
+  .promo-wrap { padding: 0 22px; margin-top: 36px; }
   .promo-banner { height: 300px; }
-  .promo-overlay { padding: 32px; }
-  .menu-header { height: 230px; padding-bottom: 32px; }
-  .category-strip-inner,
-  .sticky-cat-nav-inner { padding: 0 22px; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .promo-overlay { padding: 28px; }
+  .promo-content { padding: 22px 24px; max-width: 100%; }
+  .promo-title { font-size: clamp(28px, 7vw, 42px); }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .footer-legal { flex-wrap: wrap; gap: 12px; }
   .hero-scroll-indicator { display: none; }
   .ingredients-grid { grid-template-columns: repeat(2, 1fr); }
+  .section { padding: 56px 0; }
+  .section-title { font-size: clamp(32px, 8vw, 52px); }
+  .history-strip-inner { padding: 48px 22px; }
+  .history-title { font-size: clamp(28px, 7vw, 42px); }
 }
 
 @media (max-width: 480px) {
-  .hero-title { font-size: clamp(52px, 14vw, 72px); letter-spacing: -1px; }
-  .hero-actions { flex-direction: column; align-items: flex-start; width: 100%; }
+  .hero-title { font-size: clamp(48px, 13vw, 68px); letter-spacing: -1px; }
+  .hero-subtitle { font-size: 14px; }
+  .hero-actions { flex-direction: column; align-items: stretch; width: 100%; gap: 12px; }
   .btn-primary, .btn-secondary { width: 100%; justify-content: center; text-align: center; }
-  .menu-circle-grid { grid-template-columns: 1fr !important; }
-  .circle-img { width: 180px; height: 180px; }
-  .footer-legal { gap: 14px; }
+  .footer-legal { gap: 10px; font-size: 12px; }
   .promo-slider { height: 380px; }
   .promo-slide-content { padding: 0 48px; }
-  .dark-grid { grid-template-columns: 1fr !important; }
+  .promo-slide-content { margin-left: 20px; padding: 24px; }
+  .promo-content { padding: 18px 20px; }
+  .quality-grid { grid-template-columns: 1fr; }
+  .section { padding: 44px 0; }
+  .footer-top { gap: 24px; }
 }
 
 /* ===================================================
@@ -1372,13 +1373,28 @@ footer {
   line-height: 1.1;
 }
 
-/* Responsive */
+/* Responsive — menu page */
 @media (max-width: 1100px) {
   .dark-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 200px; }
   .dark-menu-wrap { padding: calc(var(--nav-height) + 32px) 28px 60px; }
 }
 @media (max-width: 768px) {
-  .dark-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; gap: 10px; }
-  .dark-menu-wrap { padding: calc(var(--nav-height) + 24px) 16px 48px; }
+  .dark-menu-wrap { padding: calc(var(--nav-height) + 20px) 14px 48px; }
+  .dark-menu-title { font-size: clamp(36px, 10vw, 56px); letter-spacing: -1px; }
+  .dark-menu-sub { font-size: 14px; }
+  .filter-bar { gap: 8px; margin-bottom: 28px; }
+  .filter-tab { padding: 8px 16px; font-size: 12px; }
+  .dark-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; gap: 10px; }
+  .dark-card.dc-lg { grid-row: span 2; }
+  .bc-name { font-size: 15px; }
+  .bc-info { padding: 10px 12px 12px; }
+}
+@media (max-width: 480px) {
+  .dark-menu-wrap { padding: calc(var(--nav-height) + 16px) 12px 40px; }
+  .dark-menu-header { margin-bottom: 28px; }
+  .filter-bar { gap: 6px; }
+  .filter-tab { padding: 7px 12px; font-size: 11px; }
+  .dark-grid { grid-template-columns: 1fr; grid-auto-rows: 240px; gap: 10px; }
   .dark-card.dc-lg { grid-row: span 1; }
+  .bc-name { font-size: 17px; }
 }
