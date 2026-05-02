@@ -176,11 +176,7 @@ a { text-decoration: none; color: inherit; }
   transition: transform 9s ease;
 }
 .hero.loaded .hero-bg { transform: scale(1); }
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.05) 100%);
-}
+.hero-overlay { display: none; }
 .hero-content {
   position: relative;
   z-index: 2;
@@ -214,15 +210,17 @@ a { text-decoration: none; color: inherit; }
   text-transform: uppercase;
   color: white;
   margin-bottom: 24px;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.45);
 }
 .hero-title span { color: var(--yellow); }
 .hero-subtitle {
   font-size: 17px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.92);
   max-width: 440px;
   margin-bottom: 40px;
   line-height: 1.7;
   font-weight: 400;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.5);
 }
 .hero-actions {
   display: flex;
@@ -853,6 +851,40 @@ footer {
   gap: 32px 24px;
 }
 
+/* Homepage overrides — larger circles, 3×2 grid */
+.home-circle-grid {
+  gap: 52px 40px;
+}
+.home-circle-grid .circle-img {
+  width: 260px;
+  height: 260px;
+}
+.home-circle-grid .circle-title { font-size: 24px; }
+
+/* Homepage section head — centered */
+.home-section-head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.home-section-head .section-title {
+  display: inline-block;
+}
+.home-section-head .section-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--red);
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+
+/* CTA below the circle grid */
+.home-circle-cta {
+  text-align: center;
+  margin-top: 52px;
+}
+
 /* ===== CIRCLE CARD ===== */
 .circle-card {
   display: flex;
@@ -865,8 +897,8 @@ footer {
 
 /* Circular image */
 .circle-img {
-  width: 210px;
-  height: 210px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
   background: #f0ede6;
@@ -1046,9 +1078,11 @@ footer {
   .quality-grid { grid-template-columns: 1fr; }
   .menu-circle-grid { grid-template-columns: repeat(2, 1fr) !important; max-width: 100% !important; gap: 28px 16px; }
   .menu-circle-grid.cols-4 { grid-template-columns: repeat(2, 1fr) !important; }
-  .circle-img { width: 150px; height: 150px; }
+  .home-circle-grid .circle-img { width: 150px; height: 150px; }
+  .circle-img { width: 160px; height: 160px; }
   .circle-img--sm { width: 110px; height: 110px; }
   .circle-title { font-size: 18px; }
+  .home-circle-grid .circle-title { font-size: 18px; }
   .tiles-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
   .tiles-grid .tile:first-child { grid-row: auto; }
   .tiles-grid .tile-img { min-height: 220px; }
