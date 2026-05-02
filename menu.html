@@ -12,7 +12,7 @@
 <body class="menu-page">
 
   <!-- ========== NAVBAR ========== -->
-  <nav class="navbar navbar--dark scrolled" id="navbar">
+  <nav class="navbar scrolled" id="navbar">
     <a href="index.html" class="nav-logo">
       <img src="images/logo.svg" alt="In-N-Out Burger">
     </a>
@@ -31,7 +31,7 @@
   </nav>
 
   <!-- ========== MOBILE MENU ========== -->
-  <div class="mobile-menu mobile-menu--dark" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="index.html">Home</a>
     <a href="menu.html">Menu</a>
     <a href="index.html#story">Our Story</a>
@@ -57,155 +57,106 @@
       <button class="filter-tab" data-filter="ingredients">🥬 Ingredients</button>
     </div>
 
-    <!-- Grid -->
+    <!-- Bento Grid -->
     <div class="dark-grid">
 
       <!-- BURGERS -->
       <div class="dark-card" data-category="burgers">
-        <div class="dc-img-wrap"><img src="images/double-double.jpg" alt="Double-Double"></div>
-        <div class="dc-body">
-          <div class="dc-name">Double-Double®</div>
-          <div class="dc-pill"><span>Signature</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img"><img src="images/double-double.jpg" alt="Double-Double"></div>
+        <div class="bc-info"><span class="bc-cat">Burgers</span><strong class="bc-name">Double-Double®</strong></div>
+      </div>
+
+      <div class="dark-card dc-lg" data-category="burgers">
+        <div class="bc-img"><img src="images/cheeseburger.jpg" alt="Cheeseburger"></div>
+        <div class="bc-info"><span class="bc-cat">Burgers</span><strong class="bc-name">Cheeseburger</strong></div>
       </div>
 
       <div class="dark-card" data-category="burgers">
-        <div class="dc-img-wrap"><img src="images/cheeseburger.jpg" alt="Cheeseburger"></div>
-        <div class="dc-body">
-          <div class="dc-name">Cheeseburger</div>
-          <div class="dc-pill"><span>Classic</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
-      </div>
-
-      <div class="dark-card" data-category="burgers">
-        <div class="dc-img-wrap"><img src="images/hamburger.jpg" alt="Hamburger"></div>
-        <div class="dc-body">
-          <div class="dc-name">Hamburger</div>
-          <div class="dc-pill"><span>Pure Beef</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img"><img src="images/hamburger.jpg" alt="Hamburger"></div>
+        <div class="bc-info"><span class="bc-cat">Burgers</span><strong class="bc-name">Hamburger</strong></div>
       </div>
 
       <!-- FRIES -->
-      <div class="dark-card" data-category="fries">
-        <div class="dc-img-wrap"><img src="images/fries.jpg" alt="French Fries"></div>
-        <div class="dc-body">
-          <div class="dc-name">French Fries</div>
-          <div class="dc-pill"><span>Fresh Cut</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+      <div class="dark-card dc-lg" data-category="fries">
+        <div class="bc-img"><img src="images/fries.jpg" alt="French Fries"></div>
+        <div class="bc-info"><span class="bc-cat">Sides</span><strong class="bc-name">French Fries</strong></div>
       </div>
 
       <div class="dark-card" data-category="fries">
-        <div class="dc-img-wrap"><img src="images/potatoes.jpg" alt="Fresh Potatoes"></div>
-        <div class="dc-body">
-          <div class="dc-name">Cut Fresh Daily</div>
-          <div class="dc-pill"><span>Farm Fresh</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img"><img src="images/potatoes.jpg" alt="Fresh Potatoes"></div>
+        <div class="bc-info"><span class="bc-cat">Sides</span><strong class="bc-name">Cut Fresh Daily</strong></div>
       </div>
 
       <!-- SHAKES -->
       <div class="dark-card" data-category="shakes">
-        <div class="dc-img-wrap dc-img-contain"><img src="images/shakes.png" alt="Chocolate Shake"></div>
-        <div class="dc-body">
-          <div class="dc-name">Chocolate Shake</div>
-          <div class="dc-pill"><span>Real Cream</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img bc-contain"><img src="images/shakes.png" alt="Chocolate Shake"></div>
+        <div class="bc-info"><span class="bc-cat">Shakes</span><strong class="bc-name">Chocolate Shake</strong></div>
+      </div>
+
+      <div class="dark-card dc-lg" data-category="shakes">
+        <div class="bc-img bc-contain"><img src="images/shakes.png" alt="Strawberry Shake"></div>
+        <div class="bc-info"><span class="bc-cat">Shakes</span><strong class="bc-name">Strawberry Shake</strong></div>
       </div>
 
       <div class="dark-card" data-category="shakes">
-        <div class="dc-img-wrap dc-img-contain"><img src="images/shakes.png" alt="Strawberry Shake"></div>
-        <div class="dc-body">
-          <div class="dc-name">Strawberry Shake</div>
-          <div class="dc-pill"><span>Real Cream</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
-      </div>
-
-      <div class="dark-card" data-category="shakes">
-        <div class="dc-img-wrap dc-img-contain"><img src="images/shakes.png" alt="Vanilla Shake"></div>
-        <div class="dc-body">
-          <div class="dc-name">Vanilla Shake</div>
-          <div class="dc-pill"><span>Real Cream</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img bc-contain"><img src="images/shakes.png" alt="Vanilla Shake"></div>
+        <div class="bc-info"><span class="bc-cat">Shakes</span><strong class="bc-name">Vanilla Shake</strong></div>
       </div>
 
       <!-- DRINKS -->
       <div class="dark-card" data-category="drinks">
-        <div class="dc-img-wrap dc-img-contain"><img src="images/cups.png" alt="Soft Drinks"></div>
-        <div class="dc-body">
-          <div class="dc-name">Soft Drinks</div>
-          <div class="dc-pill"><span>Multiple Sizes</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img bc-contain"><img src="images/cups.png" alt="Soft Drinks"></div>
+        <div class="bc-info"><span class="bc-cat">Drinks</span><strong class="bc-name">Soft Drinks</strong></div>
       </div>
 
       <div class="dark-card" data-category="drinks">
-        <div class="dc-img-wrap dc-img-contain"><img src="images/cups.png" alt="Hot Drinks"></div>
-        <div class="dc-body">
-          <div class="dc-name">Hot Drinks</div>
-          <div class="dc-pill"><span>Freshly Brewed</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img bc-contain"><img src="images/cups.png" alt="Hot Drinks"></div>
+        <div class="bc-info"><span class="bc-cat">Drinks</span><strong class="bc-name">Hot Drinks</strong></div>
       </div>
 
       <div class="dark-card" data-category="drinks">
-        <div class="dc-img-wrap dc-img-contain"><img src="images/cups.png" alt="Milk"></div>
-        <div class="dc-body">
-          <div class="dc-name">Milk</div>
-          <div class="dc-pill"><span>Cold &amp; Fresh</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img bc-contain"><img src="images/cups.png" alt="Milk"></div>
+        <div class="bc-info"><span class="bc-cat">Drinks</span><strong class="bc-name">Milk</strong></div>
       </div>
 
       <!-- INGREDIENTS -->
-      <div class="dark-card" data-category="ingredients">
-        <div class="dc-img-wrap"><img src="images/buns.jpg" alt="Toasted Buns"></div>
-        <div class="dc-body">
-          <div class="dc-name">Toasted Buns</div>
-          <div class="dc-pill"><span>Baked Fresh</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+      <div class="dark-card dc-lg" data-category="ingredients">
+        <div class="bc-img"><img src="images/buns.jpg" alt="Toasted Buns"></div>
+        <div class="bc-info"><span class="bc-cat">Ingredients</span><strong class="bc-name">Toasted Buns</strong></div>
       </div>
 
       <div class="dark-card" data-category="ingredients">
-        <div class="dc-img-wrap"><img src="images/cheese.jpg" alt="Real Cheese"></div>
-        <div class="dc-body">
-          <div class="dc-name">Real Cheese</div>
-          <div class="dc-pill"><span>100% Real</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img"><img src="images/cheese.jpg" alt="Real Cheese"></div>
+        <div class="bc-info"><span class="bc-cat">Ingredients</span><strong class="bc-name">Real Cheese</strong></div>
       </div>
 
       <div class="dark-card" data-category="ingredients">
-        <div class="dc-img-wrap"><img src="images/lettuce.jpg" alt="Lettuce"></div>
-        <div class="dc-body">
-          <div class="dc-name">Lettuce</div>
-          <div class="dc-pill"><span>Hand-Leafed</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img"><img src="images/lettuce.jpg" alt="Lettuce"></div>
+        <div class="bc-info"><span class="bc-cat">Ingredients</span><strong class="bc-name">Lettuce</strong></div>
       </div>
 
       <div class="dark-card" data-category="ingredients">
-        <div class="dc-img-wrap"><img src="images/spread.jpg" alt="Our Spread"></div>
-        <div class="dc-body">
-          <div class="dc-name">Our Spread</div>
-          <div class="dc-pill"><span>Since 1948</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img"><img src="images/spread.jpg" alt="Our Spread"></div>
+        <div class="bc-info"><span class="bc-cat">Ingredients</span><strong class="bc-name">Our Spread</strong></div>
       </div>
 
       <div class="dark-card" data-category="ingredients">
-        <div class="dc-img-wrap"><img src="images/tomatoes.jpg" alt="Tomatoes"></div>
-        <div class="dc-body">
-          <div class="dc-name">Tomatoes</div>
-          <div class="dc-pill"><span>Sliced Daily</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img"><img src="images/tomatoes.jpg" alt="Tomatoes"></div>
+        <div class="bc-info"><span class="bc-cat">Ingredients</span><strong class="bc-name">Tomatoes</strong></div>
       </div>
 
       <div class="dark-card" data-category="ingredients">
-        <div class="dc-img-wrap"><img src="images/double-double.jpg" alt="100% Beef"></div>
-        <div class="dc-body">
-          <div class="dc-name">100% Beef</div>
-          <div class="dc-pill"><span>No Additives</span><button class="dc-arrow">&#8250;</button></div>
-        </div>
+        <div class="bc-img"><img src="images/double-double.jpg" alt="100% Beef"></div>
+        <div class="bc-info"><span class="bc-cat">Ingredients</span><strong class="bc-name">100% Beef</strong></div>
       </div>
+
+    </div>
 
     </div>
   </div>
 
   <!-- ========== FOOTER ========== -->
-  <footer class="footer--dark-page">
+  <footer>
     <div class="footer-inner">
       <div class="footer-top">
         <div>
