@@ -159,7 +159,7 @@ a { text-decoration: none; color: inherit; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/homepage/double-double.webp');
+  background-image: url('images/hero.webp');
   background-size: cover;
   background-position: center 30%;
   transform: scale(1.06);
@@ -727,7 +727,7 @@ footer {
 .menu-header-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://www.in-n-out.com/Frontend-Assembly/Telerik.Sitefinity.Frontend/content/images/menu/bg@2x.jpg');
+  background-image: url('images/menu-bg.jpg');
   background-size: cover;
   background-position: center;
 }
