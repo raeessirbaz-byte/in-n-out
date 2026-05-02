@@ -258,7 +258,7 @@ a { text-decoration: none; color: inherit; }
   color: white;
   padding: 14px 34px;
   border-radius: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  border: 2px solid var(--red);
   font-family: var(--font-main);
   font-weight: 700;
   font-size: 16px;
@@ -267,8 +267,8 @@ a { text-decoration: none; color: inherit; }
   transition: border-color var(--transition), background var(--transition);
 }
 .btn-secondary:hover {
-  border-color: white;
-  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--red-dark);
+  background: rgba(218, 41, 28, 0.15);
 }
 .hero-scroll-indicator {
   position: absolute;
