@@ -72,72 +72,30 @@ if (fadeEls.length && 'IntersectionObserver' in window) {
   fadeEls.forEach(el => el.classList.add('visible'));
 }
 
-/* ===== MENU PAGE: STICKY CATEGORY NAV + SCROLL SPY ===== */
-const stickyCatNav = document.getElementById('stickyCatNav');
-if (stickyCatNav) {
-  const sectionIds = ['burgers', 'fries', 'shakes', 'drinks', 'ingredients'];
-  const catLinks   = stickyCatNav.querySelectorAll('.cat-item[data-target]');
+/* ===== PROMO SLIDER ===== */
+const promoSlider = document.getElementById('promoSlider');
+if (promoSlider) {
+  const slides = promoSlider.querySelectorAll('.promo-slide');
+  const dots   = document.querySelectorAll('.slider-dot');
+  let current  = 0;
+  let timer;
 
-  const getOffsets = () => {
-    const navH = navbar ? navbar.offsetHeight : 70;
-    const catH = stickyCatNav.offsetHeight;
-    return navH + catH + 24;
+  const goTo = (index) => {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
   };
 
-  const setActive = (id) => {
-    catLinks.forEach(link => {
-      const isActive = link.dataset.target === id;
-      link.classList.toggle('active', isActive);
-    });
+  const autoplay = () => { timer = setInterval(() => goTo(current + 1), 5000); };
+  const resetTimer = () => { clearInterval(timer); autoplay(); };
 
-    const activeLink = stickyCatNav.querySelector(`.cat-item[data-target="${id}"]`);
-    if (activeLink) {
-      activeLink.scrollIntoView({ inline: 'nearest', behavior: 'smooth', block: 'nearest' });
-    }
-  };
+  document.getElementById('sliderNext')?.addEventListener('click', () => { goTo(current + 1); resetTimer(); });
+  document.getElementById('sliderPrev')?.addEventListener('click', () => { goTo(current - 1); resetTimer(); });
+  dots.forEach(dot => dot.addEventListener('click', () => { goTo(+dot.dataset.index); resetTimer(); }));
 
-  catLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = link.dataset.target;
-      const targetEl = document.getElementById(targetId);
-      if (!targetEl) return;
-      const offset = getOffsets();
-      const top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    });
-  });
-
-  const scrollSpy = () => {
-    const offset = getOffsets();
-    let current = sectionIds[0];
-    sectionIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el && el.getBoundingClientRect().top <= offset + 8) {
-        current = id;
-      }
-    });
-    setActive(current);
-  };
-
-  window.addEventListener('scroll', scrollSpy, { passive: true });
-  scrollSpy();
-}
-
-/* ===== HOMEPAGE: CATEGORY STRIP HOVER ACTIVE ===== */
-const catStrip = document.querySelector('.category-strip');
-if (catStrip && !stickyCatNav) {
-  const items = catStrip.querySelectorAll('.cat-item');
-  items.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      items.forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
-    });
-  });
-  catStrip.addEventListener('mouseleave', () => {
-    items.forEach(i => i.classList.remove('active'));
-    if (items[0]) items[0].classList.add('active');
-  });
+  autoplay();
 }
 
 /* ===== MENU PAGE: FILTER TABS ===== */
